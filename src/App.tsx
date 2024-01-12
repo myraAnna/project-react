@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 
 import { AnimatePresence } from 'framer-motion';
 import { Route, Routes, Navigate } from 'react-router-dom';

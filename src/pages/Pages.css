@@ -3,24 +3,16 @@
     display: flex;
     height: 100vh;
     flex-direction: column;
-  }
+}
   
-  .lottieContainer,
+.lottieContainer,
   .formContainer {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-
-  .lottieContainer {
-    background-color: rgb(250, 240, 230); /* Lighter background */
-    color: rgb(22, 26, 48); /* White text for better readability */
-    position: relative;
-
     .nf {
-      position: absolute;
       top: 0;
       left: 0;
       right: 0;
@@ -28,8 +20,7 @@
       text-align: center;
       font-family: Raleway, sans-serif;
       line-height: 3em;
-      padding-top: 12em;
-      padding-bottom: 2em;
+      padding: 2vh 2vw 2vh 2vw;
     }
     
     .nf-r1 {
@@ -61,34 +52,48 @@
       font-weight: 300;
       font-style: italic;
     }
-
   }
-  
-  .welcomeText {
-    color: rgb(92, 84, 112) /* Match text color with the form background */
+
+  .stackedContainer {
+    background-color: rgb(250, 240, 230); 
+    color: rgb(22, 26, 48); 
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
   
   .formContainer {
     flex-direction: column;
     padding: 32px;
-    background-color: rgb(250, 240, 230); /* Lighter background for the form */
+    background-color: rgb(250, 240, 230); 
   }
   
   .form {
     width: 100%;
     max-width: 600px;
     max-height: 600px;
-    padding: 50px;
+    padding: 40px;
     background-color: #ffffff;
     color: rgb(22, 26, 48);
     border-radius: 8px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Add box-shadow */
-    transition: all 0.3s ease; /* Add transition */
-    font-family: 'Roboto', sans-serif; /* Change the font-family */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    font-family: 'Roboto', sans-serif; 
+
+    .welcomeText {
+      color: rgb(92, 84, 112);
+    }
+
+    .link {
+      font-weight: 600;
+      text-decoration: underline; 
+      cursor: pointer; 
+      color: #3b82f6; 
+  }
   }
   
   .form:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Change the box-shadow on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
   }
 
   .customTypography {

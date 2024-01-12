@@ -12,11 +12,6 @@
     padding: 10px; /* Add some padding */
     width: 100%; /* Make the text fields take up the full width of their parent container */
   }
-
-  .customButton {
-    background-color: rgb(92, 84, 112);
-    color: white; /* You may want to set the text color to ensure it's readable on the new background */
-  }
   
   /* Styles for screens that are 600px or smaller */
   @media (max-width: 600px) {

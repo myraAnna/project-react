@@ -6,7 +6,7 @@ import LoginForm from '../components/LoginForm';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
-import transition from '../framerMotionTransition';
+import framerMotionTransition from '../framerMotionTransition';
 import './Pages.css';
 
 const LoginPage = () => {
@@ -31,15 +31,15 @@ const LoginPage = () => {
 
   return (
     <div className="root">
-      <div className="lottieContainer">
-          <div className="nf">
-              <h2 className="nf-r1">Registration & Login  with</h2>
-              <h1 className="nf-r2">REACT JS</h1>
-          </div>
-          <Lottie options={defaultOptions} style={{ width: '100%', height: '100%', maxWidth: '500px', maxHeight: '500px' }}  />
+      <div className="stackedContainer">
+          <Lottie options={defaultOptions} style={{ width: '100%', height: '100%' }}  />
       </div>
 
       <div className="formContainer">
+        <div className="nf">
+              <h2 className="nf-r1">Registration & Login  with</h2>
+              <h1 className="nf-r2">REACT JS</h1>
+        </div>
         <Paper className="form">
           <Typography className="welcomeText" variant="h4" >
             Login
@@ -52,8 +52,8 @@ const LoginPage = () => {
 
           <div className="w-full flex items-center justify-center">
             <Typography variant="body2" className="customTypography">
-              Don't have an account? 
-              <Link to="/register" className='font-semibold underline underline-offset-2 cursor-pointer text-blue-500'> 
+              Don't have an account?{' '}
+              <Link to="/register" className='link'> 
                 Register Now for free
               </Link>
             </Typography>
@@ -64,4 +64,4 @@ const LoginPage = () => {
   );
 }
 
-export default transition(LoginPage);
+export default framerMotionTransition(LoginPage);

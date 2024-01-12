@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FunctionComponent } from "react";
 
-const transition = (OgComponent: FunctionComponent) => {
+const framerMotionTransition = (OgComponent: FunctionComponent) => {
     return () => {
         return (
             <>
@@ -25,4 +25,4 @@ const transition = (OgComponent: FunctionComponent) => {
     };
 }
 
-export default transition;
+export default framerMotionTransition;

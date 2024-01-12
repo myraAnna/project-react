@@ -60,7 +60,7 @@ const RegistrationForm = () => {
         margin="normal"
         fullWidth
       />
-      <Button type="submit" variant="contained" className="customButton" fullWidth>
+      <Button type="submit" variant="contained" fullWidth style={{ backgroundColor: 'rgb(92, 84, 112)', color: 'white', marginTop: '10px' }}>
         Register
       </Button>
     </form>
