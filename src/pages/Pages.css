@@ -1,0 +1,131 @@
+/* LoginPage.tsx && RegistrationPage.tsx */
+.root {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  .lottieContainer,
+  .formContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .lottieContainer {
+    background-color: rgb(250, 240, 230); /* Lighter background */
+    color: rgb(22, 26, 48); /* White text for better readability */
+    position: relative;
+
+    .nf {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      color: #000;
+      text-align: center;
+      font-family: Raleway, sans-serif;
+      line-height: 3em;
+      padding-top: 12em;
+      padding-bottom: 2em;
+    }
+    
+    .nf-r1 {
+      font-size: 1.5em;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 1.2em;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2em;
+    }
+    
+    .nf-r1::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 20%;
+      bottom: -0.5em;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      background-color: #000;
+    }
+    
+    .nf-r2 {
+      font-family: Lora, serif;
+      font-size: 6em;
+      line-height: 1em;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+  }
+  
+  .welcomeText {
+    color: rgb(92, 84, 112) /* Match text color with the form background */
+  }
+  
+  .formContainer {
+    flex-direction: column;
+    padding: 32px;
+    background-color: rgb(250, 240, 230); /* Lighter background for the form */
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    padding: 50px;
+    background-color: #ffffff;
+    color: rgb(22, 26, 48);
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+    transition: all 0.3s ease; /* Add transition */
+    font-family: 'Roboto', sans-serif; /* Change the font-family */
+  }
+  
+  .form:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Change the box-shadow on hover */
+  }
+
+  .customTypography {
+    color: rgb(22, 26, 48); 
+    font-weight: bold; 
+    font-size: 1.2em; 
+    text-align: center; 
+    margin: 20px 0; 
+    padding-top: 1rem;
+  }
+  
+  /* Styles for screens that are 768px or larger */
+  @media (min-width: 768px) {
+    .root {
+        flex-direction: row;
+    }
+
+    .formContainer {
+        width: 70%; /* Reduce the width for larger screens */
+    }
+
+    .form {
+        max-width: 70%; /* Reduce the max-width for larger screens */
+    }
+  }
+
+  /* Styles for screens that are 1024px or larger */
+  @media (min-width: 1024px) {
+    .formContainer {
+        width: 60%; /* Reduce the width for larger screens */
+    }
+
+    .form {
+        max-width: 60%; /* Reduce the max-width for larger screens */
+    }
+  }
+
+
+
+  
