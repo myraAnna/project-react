@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import './Form.css';
 
 const RegistrationForm = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleToggleConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+
   const handleRegistration = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const name = (event.currentTarget.elements.namedItem('name') as HTMLInputElement).value;
@@ -16,8 +30,24 @@ const RegistrationForm = () => {
       return;
     }
 
-    // Here you would typically send the user data to your server
-    console.log(`Registered with name: ${name}, email: ${email}, password: ${password}`);
+    const credentials = {
+        name: name,
+        email: email,
+        password: password
+    };
+
+    fetch('http://localhost:3333/register', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(credentials),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   };
 
   return (
@@ -41,24 +71,35 @@ const RegistrationForm = () => {
         fullWidth
       />
       <TextField
-        required
         id="password"
+        type={showPassword ? 'text' : 'password'}
         label="Password"
-        type="password"
-        defaultValue=""
         variant="outlined"
-        margin="normal"
         fullWidth
+        InputProps={{
+          endAdornment: (
+            <IconButton onClick={handleTogglePassword}>
+              {showPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
+          ),
+        }}
       />
       <TextField
         required
         id="confirmPassword"
         label="Confirm Password"
-        type="password"
+        type={showConfirmPassword ? 'text' : 'password'}
         defaultValue=""
         variant="outlined"
         margin="normal"
         fullWidth
+        InputProps={{
+          endAdornment: (
+            <IconButton onClick={handleToggleConfirmPassword}>
+              {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+            </IconButton>
+          ),
+        }}
       />
       <Button type="submit" variant="contained" fullWidth style={{ backgroundColor: 'rgb(92, 84, 112)', color: 'white', marginTop: '10px' }}>
         Register
