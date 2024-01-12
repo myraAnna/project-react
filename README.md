@@ -15,10 +15,14 @@ Open [http://localhost:3333](http://localhost:3333) to view it in the browser.
 
 This project leverages the following technologies:
 
-- **LottieFiles:** Utilized for rendering captivating animations in various sections.
-- **Framer Motion:** Integrated for creating smooth and interactive animations throughout the application.
-- **Material-UI:** Employed to design a cohesive and visually appealing user interface.
-- **React Icons:** Used for easily incorporating scalable icons, enhancing the overall user experience.
+- **LottieFiles:** [https://lottiefiles.com]
+  Utilized for rendering captivating animations in various sections. 
+- **Framer Motion:** [https://www.framer.com/motion/]
+  Integrated for creating smooth and interactive animations throughout the application.
+- **Material-UI:** [https://mui.com]
+  Employed to design a cohesive and visually appealing user interface.
+- **React Icons:** [https://react-icons.github.io/react-icons/]
+  Used for easily incorporating scalable icons, enhancing the overall user experience.
 
 
 
