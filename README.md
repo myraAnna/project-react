@@ -1,4 +1,4 @@
-![Opera Snapshot_2024-01-12_154718_localhost](https://github.com/myraAnna/project-react/assets/86984336/6b717235-5da9-4ff1-a307-28a8a55f30a1)# Getting Started with Create React App
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
